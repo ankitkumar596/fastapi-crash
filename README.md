@@ -27,37 +27,29 @@ This document outlines the initial setup and Git configuration steps for the Fas
    source .venv/bin/activate
    uvicorn main:app --reload
 
-🛠️ Instructions to Enable the Service:
-Create the service file:
+## 🛠️ Instructions to Enable the Service:
+1. ## Create the service file:##
+  ```bash
+  sudo nano /etc/systemd/system/fastapi-app.service
+  ```
+2. ##Reload systemd to recognize the new service:##
 
-bash
-Copy
-Edit
-sudo nano /etc/systemd/system/fastapi-app.service
-Paste the above content into the file and save (Ctrl+O, Enter, then Ctrl+X).
+ ```bash
+ sudo systemctl daemon-reexec
+ sudo systemctl daemon-reload
+```
+3. ##Enable the service to start on boot:
 
-Reload systemd to recognize the new service:
+  ```bash
+  sudo systemctl enable fastapi-app.service
+```
+4. ## Start the service:
 
-bash
-Copy
-Edit
-sudo systemctl daemon-reexec
-sudo systemctl daemon-reload
-Enable the service to start on boot:
-
-bash
-Copy
-Edit
-sudo systemctl enable fastapi-app.service
-Start the service:
-
-bash
-Copy
-Edit
+```bash
 sudo systemctl start fastapi-app.service
-Check the status:
+```
+5. ## Check the status:
 
-bash
-Copy
-Edit
-sudo systemctl status fastapi-app.service
+```bash
+ sudo systemctl status fastapi-app.service
+```
