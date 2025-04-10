@@ -29,7 +29,7 @@ This document outlines the initial setup and Git configuration steps for the Fas
    uvicorn main:app --reload
 
 ## 🛠️ Instructions to Enable the Service:
-1. ** Create the service file:**
+1. **Create the service file:**
   ```bash
   sudo nano /etc/systemd/system/fastapi-app.service
   ```
@@ -44,12 +44,12 @@ This document outlines the initial setup and Git configuration steps for the Fas
   ```bash
   sudo systemctl enable fastapi-app.service
 ```
-4. ** Start the service:**
+4. **Start the service:**
 
 ```bash
 sudo systemctl start fastapi-app.service
 ```
-5. ** Check the status:**
+5. **Check the status:**
 
 ```bash
  sudo systemctl status fastapi-app.service
