@@ -19,3 +19,10 @@ This document outlines the initial setup and Git configuration steps for the Fas
    ```bash
     uvicorn main:app --reload
    
+## 🛠️ Git Setup
+1. ** Clone the repository:**
+   ``` bash
+   git clone -b main https://github.com/ankitkumar596/fastapi-crash/
+   cd fastapi-crash
+   source .venv/bin/activate
+   uvicorn main:app --reload
